@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Честит рожден ден!</title>
+  <style>
+    body {
+      background: #ffe4e1;
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    h1 {
+      color: #ff1493;
+      font-size: 2.5em;
+    }
+    p {
+      font-size: 1.2em;
+      color: #333;
+    }
+    .balloon {
+      position: absolute;
+      width: 30px;
+      height: 40px;
+      background: pink;
+      border-radius: 50%;
+      animation: float 5s infinite ease-in;
+    }
+    @keyframes float {
+      0% { bottom: -50px; opacity: 0; }
+      50% { opacity: 1; }
+      100% { bottom: 100vh; opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Честит рожден ден, Жоро! 🎉</h1>
+  <p></p>
+  
+  <div class="balloon" style="left: 30%; background: #ff69b4;"></div>
+  <div class="balloon" style="left: 60%; background: #87cefa;"></div>
+</body>
+</html>
