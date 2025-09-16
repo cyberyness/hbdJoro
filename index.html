@@ -4,39 +4,70 @@
   <title>Честит рожден ден!</title>
   <style>
     body {
-      background: #ffe4e1;
+      background: #a6d0ca;
       font-family: sans-serif;
       text-align: center;
       padding-top: 100px;
+      overflow: hidden;
     }
     h1 {
       color: #ff1493;
       font-size: 2.5em;
+      text-shadow: 2px 2px #fff;
+      border-bottom: 2px dashed #ff1493;
+      padding-bottom: 10px;
     }
     p {
       font-size: 1.2em;
       color: #333;
+      margin-bottom: 30px;
     }
-    .balloon {
+    button {
+      background-color: #ff1493;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+    .balloon, .confetti {
       position: absolute;
-      width: 30px;
-      height: 40px;
-      background: pink;
       border-radius: 50%;
       animation: float 5s infinite ease-in;
+    }
+    .balloon {
+      width: 30px;
+      height: 40px;
+    }
+    .confetti {
+      width: 10px;
+      height: 10px;
+      animation: fall 4s infinite linear;
     }
     @keyframes float {
       0% { bottom: -50px; opacity: 0; }
       50% { opacity: 1; }
       100% { bottom: 100vh; opacity: 0; }
     }
+    @keyframes fall {
+      0% { top: -20px; opacity: 0; }
+      50% { opacity: 1; }
+      100% { top: 100vh; opacity: 0; }
+    }
   </style>
 </head>
 <body>
   <h1>🎉 Честит рожден ден, Жоро! 🎉</h1>
-  <p></p>
-  
+  <p>Нека денят ти бъде изпълнен с усмивки, топлина и много балони! 🥳</p>
+  <button onclick="alert('Бъди здрав и щастлив, Жоро! 🎂')">💌 Пожелание</button>
+
   <div class="balloon" style="left: 30%; background: #ff69b4;"></div>
   <div class="balloon" style="left: 60%; background: #87cefa;"></div>
+  
+  <div class="confetti" style="left: 20%; background: gold;"></div>
+  <div class="confetti" style="left: 50%; background: red;"></div>
+  <div class="confetti" style="left: 80%; background: blue;"></div>
 </body>
 </html>
